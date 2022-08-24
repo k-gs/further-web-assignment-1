@@ -2,14 +2,15 @@
 //import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react';
-import ReactDOM from 'react-dom/client';
+//import ReactDOM from 'react-dom/client';
+//import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
 import './Form.css';
-import LandingPage from './Landing'
+//import LandingPage from './Landing'
 
 //import ReactDOM from 'react-dom/client';
 
 
-function BasicExample() {
+function Form() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -17,11 +18,12 @@ function BasicExample() {
         event.preventDefault();
         localStorage.setItem("email", email)
         localStorage.setItem("password", password)
-        var loginSuccess = localStorage.getItem("email") == "password" ? true : false
-        if (loginSuccess) {
-            console.log("Redirecting...")
-            return <Redirect to="/LandingPage" />
-        }
+
+        // var loginSuccess = localStorage.getItem("email") == "password" ? true : false
+        // if (loginSuccess) {
+        //     console.log("Redirecting...")
+        //     return <Redirect to="/LandingPage" />
+        // }
     }
 
     return (
@@ -79,4 +81,4 @@ function BasicExample() {
     // );
 }
 
-export default BasicExample;
+export default Form;
