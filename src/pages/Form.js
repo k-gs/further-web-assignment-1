@@ -20,7 +20,7 @@ function Form() {
         localStorage.setItem("password", password)
         const d = new Date();
         d.getDate();
-        localStorage.setItem("date", d)
+        localStorage.setItem("date", d);
 
         // var loginSuccess = localStorage.getItem("email") == "password" ? true : false
         // if (loginSuccess) {
