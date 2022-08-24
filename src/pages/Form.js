@@ -18,6 +18,9 @@ function Form() {
         event.preventDefault();
         localStorage.setItem("email", email)
         localStorage.setItem("password", password)
+        const d = new Date();
+        d.getDate();
+        localStorage.setItem("date", d)
 
         // var loginSuccess = localStorage.getItem("email") == "password" ? true : false
         // if (loginSuccess) {
