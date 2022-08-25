@@ -1,18 +1,33 @@
 //import Button from 'react-bootstrap/Button';
 //import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Link,
+    useLocation,
+    Navigate,
+} from "react-router-dom";
 import {useState} from 'react';
+import LandingPage from './Landing';
+
+//import {
+//    BrowserRouter as Router,
+//    Route,
+//    Routes,
+//    Link,
+//    useLocation,
+//} from "react-router-dom";
+
 //import ReactDOM from 'react-dom/client';
 //import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
 import './Form.css';
-//import LandingPage from './Landing'
-
-//import ReactDOM from 'react-dom/client';
-
 
 function Form() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loggedIn, setLoggedIn] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -22,11 +37,12 @@ function Form() {
         d.getDate();
         localStorage.setItem("date", d);
 
-        // var loginSuccess = localStorage.getItem("email") == "password" ? true : false
-        // if (loginSuccess) {
-        //     console.log("Redirecting...")
-        //     return <Redirect to="/LandingPage" />
-        // }
+        if (localStorage.getItem("email") === "test@mail.eu") setLoggedIn(true)
+    }
+
+    if (loggedIn) {
+        console.log("Redirecting...")
+        return <Navigate replace to="/LandingPage" />;
     }
 
     return (

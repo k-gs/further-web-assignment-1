@@ -7,7 +7,7 @@ import './Form.css';
 
 function LandingPage() {
     return (
-        <label>Login successful</label>
+        <h1>Login successful</h1>
     )
 }
 
