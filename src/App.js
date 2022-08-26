@@ -1,4 +1,4 @@
-// App.js
+////// App.js
 import React, {useEffect} from "react";
 import {
     BrowserRouter as Router,
@@ -14,8 +14,6 @@ import MainPage from './pages/MainPage';
 import Landing from './pages/Landing';
 import Profile from './pages/Profile';
 import ProfileEdit from "./pages/Profile_Edit";
-import Navbar from "./pages/Navbar";
-import Footer from "./pages/Footer";
 
 // Create a custom hook that uses both useLocation and useEffect
 const useScrollToTop = () => {
