@@ -18,6 +18,14 @@ input {
   padding:10px;
 }
 
+input[type=name] { 
+   width: 50%; 
+   padding: 12px 20px; 
+   margin-left: auto;
+   margin-right: auto;
+   box-sizing: border-box; 
+} 
+
 input[type=email] { 
    width: 50%; 
    padding: 12px 20px; 

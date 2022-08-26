@@ -1,5 +1,3 @@
-//import Button from 'react-bootstrap/Button';
-//import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     BrowserRouter as Router,
@@ -10,34 +8,31 @@ import {
     Navigate,
 } from "react-router-dom";
 import {useState} from 'react';
-import LandingPage from './Landing';
-
-//import {
-//    BrowserRouter as Router,
-//    Route,
-//    Routes,
-//    Link,
-//    useLocation,
-//} from "react-router-dom";
-
-//import ReactDOM from 'react-dom/client';
-//import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
 import './Form.css';
 
-function Form() {
+function SignUp() {
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
 
     const handleSubmit = (event) => {
+        // On form submit
         event.preventDefault();
+
+        // Save name, email, password and date of sign up 
+        // to local storage
+        localStorage.setItem("name", name)
         localStorage.setItem("email", email)
         localStorage.setItem("password", password)
         const d = new Date();
         d.getDate();
-        localStorage.setItem("date", d);
+        localStorage.setItem("date", d.getDay() + "/" + d.getMonth() +
+            "/" + d.getFullYear());
 
-        if (localStorage.getItem("email") === "test@mail.eu") setLoggedIn(true)
+        // Set user to logged in
+        setLoggedIn(true);
+        localStorage.setItem("loggedIn", true)
     }
 
     if (loggedIn) {
@@ -47,6 +42,17 @@ function Form() {
 
     return (
         <form onSubmit={handleSubmit}>
+            <label>Name:
+            </label>
+            <input
+                type="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                class="form-control"
+                placeholder="Jane Doe"
+                id="name"
+                required=""
+            />
             <label>Email:
             </label>
             <input
@@ -73,31 +79,9 @@ function Form() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <input type="submit" class="form-control" />
+            <input type="submit" value="Sign Up" class="form-control" />
         </form>
     )
-    // return (
-    //     <Form>
-    //         <Form.Group className="mb-3" controlId="formBasicEmail">
-    //             <Form.Label>Email address</Form.Label>
-    //             <Form.Control type="email" placeholder="Enter email" />
-    //             <Form.Text className="text-muted" value={email}>
-    //                 We'll never share your email with anyone else.
-    //             </Form.Text>
-    //         </Form.Group>
-
-    //         <Form.Group className="mb-3" controlId="formBasicPassword">
-    //             <Form.Label>Password</Form.Label>
-    //             <Form.Control type="password" placeholder="Password" />
-    //         </Form.Group>
-    //         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    //             <Form.Check type="checkbox" label="Check me out" />
-    //         </Form.Group>
-    //         <Button variant="primary" type="submit">
-    //             Submit
-    //         </Button>
-    //     </Form>
-    // );
 }
 
-export default Form;
+export default SignUp;
