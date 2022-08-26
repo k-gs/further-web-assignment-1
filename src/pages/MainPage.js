@@ -10,11 +10,17 @@ import {
     useLocation,
     Navigate,
 } from "react-router-dom";
-//import ReactDOM from 'react-dom/client';
 
 function MainPage() {
     return (
-        <h1>Login successful</h1>
+        <>
+            <h1>Login Successful</h1>
+            <hr />
+            <p style={{marginTop: "150vh"}}>
+                <Link to="/ProfileEdit">EditProfile</Link>
+                <Link to="/Profile">ViewProfile</Link>
+            </p>
+        </>
     );
 }
 
