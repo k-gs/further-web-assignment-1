@@ -12,16 +12,6 @@ import {
 import {useState} from 'react';
 import LandingPage from './Landing';
 
-//import {
-//    BrowserRouter as Router,
-//    Route,
-//    Routes,
-//    Link,
-//    useLocation,
-//} from "react-router-dom";
-
-//import ReactDOM from 'react-dom/client';
-//import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
 import './Form.css';
 
 function Form() {
@@ -35,9 +25,13 @@ function Form() {
         localStorage.setItem("password", password)
         const d = new Date();
         d.getDate();
-        localStorage.setItem("date", d);
+        localStorage.setItem("date", d.getDay() + "/" + d.getMonth() +
+            "/" + d.getfullyear());
 
-        if (localStorage.getItem("email") === "test@mail.eu") setLoggedIn(true)
+        if ((localstorage.getitem("email") === "test@mail.eu") &&
+            localstorage.getitem("password") === "abcd1234$")
+            setloggedin(true);
+        localstorage.setitem("loggedin", true)
     }
 
     if (loggedIn) {
@@ -73,7 +67,7 @@ function Form() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <input type="submit" class="form-control" />
+            <input type="submit" value="Log in" class="form-control" />
         </form>
     )
     // return (
