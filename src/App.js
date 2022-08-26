@@ -13,8 +13,7 @@ import SignUp from './pages/SignUp';
 import MainPage from './pages/MainPage';
 import Landing from './pages/Landing';
 import Profile from './pages/Profile';
-import Profile_Edit from "./pages/Profile_Edit";
-
+import ProfileEdit from "./pages/Profile_Edit";
 
 // Create a custom hook that uses both useLocation and useEffect
 const useScrollToTop = () => {
@@ -37,7 +36,7 @@ const App = () => {
                     <Route path="/SignIn" element={<SignIn />} />
                     <Route path="/SignUp" element={<SignUp />} />
                     <Route path="/Profile" element={<Profile />} />
-                    <Route path="/Profile Edit" element={<Profile_Edit />} />
+                    <Route path="/ProfileEdit" element={<ProfileEdit />} />
                 </Routes>
             </Router>
         </div>
