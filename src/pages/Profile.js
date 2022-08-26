@@ -20,16 +20,13 @@ function Profile() {
     document.getElementById("join_date").innerHTML = date;
 
     return (
-        <html>
         <body>
             <h1>Profile Page</h1>
             <p id = "user_email">Placeholder Email</p>
             <p id = "user_name">Placeholder Name</p>
-            <p id = "join_date">Placeholder Date</p>
-                        
+            <p id = "join_date">Placeholder Date</p>         
         </body>
-        <input type="submit" class="form-control" />
-        </html>
+
 
     )
     
