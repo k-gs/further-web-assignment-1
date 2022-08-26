@@ -17,7 +17,6 @@ function MainPage() {
             <h1>Login Successful</h1>
             <hr />
             <p style={{marginTop: "150vh"}}>
-                <Link to="/ProfileEdit">EditProfile</Link>
                 <Link to="/Profile">ViewProfile</Link>
             </p>
         </>
