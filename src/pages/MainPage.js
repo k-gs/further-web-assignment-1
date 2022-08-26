@@ -12,23 +12,28 @@ import {
 } from "react-router-dom";
 //import ReactDOM from 'react-dom/client';
 
-
 function MainPage() {
-    const [loggedIn, setLoggedIn] = useState(null);
-    useEffect(() => {
-        const loggedInUser = localStorage.getItem("loggedIn");
-        if (loggedInUser) {
-            setLoggedIn(loggedInUser);
-        }
-    }, []);
+    return (
+        <h1>Login successful</h1>
+    );
+}
 
-    if (!loggedIn) {
-        return <Navigate replace to="/" />;
-    } else {
-        return (
-            <h1>Login successful</h1>
-        );
-    }
-};
+//function MainPage() {
+//    const [loggedIn, setLoggedIn] = useState(null);
+//    useEffect(() => {
+//        const loggedInUser = localStorage.getItem("loggedIn");
+//        if (loggedInUser) {
+//            setLoggedIn(loggedInUser);
+//        }
+//    }, []);
+//
+//    if (!loggedIn) {
+//        return <Navigate replace to="/" />;
+//    } else {
+//        return (
+//            <h1>Login successful</h1>
+//        );
+//    }
+//};
 
 export default MainPage;

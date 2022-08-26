@@ -15,7 +15,14 @@ import {
 
 function Landing() {
     return (
-        <h1>Landing Page!</h1>
+        <>
+            <h1>Landing Page</h1>
+            <hr />
+            <p style={{marginTop: "150vh"}}>
+                <Link to="/SignIn">Sign In</Link>
+                <Link to="/SignUp">Sign Up</Link>
+            </p>
+        </>
     );
 }
 
