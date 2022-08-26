@@ -13,22 +13,10 @@ import {
 //import ReactDOM from 'react-dom/client';
 
 
-function LandingPage() {
-    const [loggedIn, setLoggedIn] = useState(null);
-    useEffect(() => {
-        const loggedInUser = localStorage.getItem("loggedIn");
-        if (loggedInUser) {
-            setLoggedIn(loggedInUser);
-        }
-    }, []);
+function Landing() {
+    return (
+        <h1>Landing Page!</h1>
+    );
+}
 
-    if (!loggedIn) {
-        return <Navigate replace to="/" />;
-    } else {
-        return (
-            <h1>Login successful</h1>
-        );
-    }
-};
-
-export default LandingPage;
+export default Landing;

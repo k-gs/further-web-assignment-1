@@ -10,7 +10,7 @@ import {
 import {useState} from 'react';
 import './Form.css';
 
-function Form() {
+function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
@@ -60,4 +60,4 @@ function Form() {
     )
 }
 
-export default Form;
+export default SignIn;

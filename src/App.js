@@ -8,8 +8,11 @@ import {
     useLocation,
 } from "react-router-dom";
 
-import Form from './pages/Form';
-import LandingPage from './pages/Landing';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import MainPage from './pages/MainPage';
+import Landing from './pages/Landing';
+
 
 // Create a custom hook that uses both useLocation and useEffect
 const useScrollToTop = () => {
@@ -21,44 +24,16 @@ const useScrollToTop = () => {
     }, [location]);
 };
 
-// // This is corresponding to "/" route
-// const Home = (props) => {
-//     useScrollToTop();
-//     return (
-//         <Form />
-//         // <>
-//         //     <h1>Home</h1>
-//         //     <hr />
-//         //     <p style={{marginTop: "150vh"}}>
-//         //         <Link to="/contact">Go to contact page</Link>
-//         //     </p>
-//         // </>
-//     );
-// };
-
-// // This is corresponding to "/contact" route
-// const Landing = (props) => {
-//     useScrollToTop();
-//     return (
-//         <LandingPage />
-//         // <>
-//         //     <h1>Contact</h1>
-//         //     <hr />
-//         //     <p style={{marginTop: "150vh"}}>
-//         //         <Link to="/">Go to homepage</Link>
-//         //     </p>
-//         // </>
-//     );
-// };
-
 // The root component
 const App = () => {
     return (
         <div style={{padding: 50}}>
             <Router>
                 <Routes>
-                    <Route path="/" element={<Form />} />
-                    <Route path="/LandingPage" element={<LandingPage />} />
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/MainPage" element={<MainPage />} />
+                    <Route path="/SignIn" element={<SignIn />} />
+                    <Route path="/SignUp" element={<SignUp />} />
                 </Routes>
             </Router>
         </div>
