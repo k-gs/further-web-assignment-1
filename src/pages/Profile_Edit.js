@@ -31,7 +31,7 @@ function Profile_Edit() {
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                 class="form-control"
                 id="email"
-                required=""
+                required
                 placeholder={Email}
             />
             <label>Name:
@@ -42,6 +42,7 @@ function Profile_Edit() {
                 onChange={(e) => setName(e.target.value)}
                 id="name"
                 placeholder={Name}
+                required
             />
             <input type="submit" class="form-control" />
         </form>
