@@ -32,7 +32,7 @@ function SignUp() {
 
         // Set user to logged in
         setLoggedIn(true);
-        localStorage.setItem("loggedIn", true)
+        //localStorage.setItem("loggedIn", true)
     }
 
     if (loggedIn) {

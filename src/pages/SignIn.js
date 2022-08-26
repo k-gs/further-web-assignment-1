@@ -19,7 +19,7 @@ function SignIn() {
         if ((localStorage.getItem("email") === email) &&
             localStorage.getItem("password") === password)
             setLoggedIn(true);
-        localStorage.setItem("loggedIn", true)
+        //localStorage.setItem("loggedIn", true)
     }
 
     if (loggedIn) {
