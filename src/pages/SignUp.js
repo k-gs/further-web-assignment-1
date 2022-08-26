@@ -51,7 +51,7 @@ function SignUp() {
                 class="form-control"
                 placeholder="Jane Doe"
                 id="name"
-                required=""
+                required
             />
             <label>Email:
             </label>
@@ -63,7 +63,7 @@ function SignUp() {
                 class="form-control"
                 placeholder="name@example.com"
                 id="email"
-                required=""
+                required
             />
             <label>Password:
             </label>
@@ -78,6 +78,7 @@ function SignUp() {
                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
             />
             <input type="submit" value="Sign Up" class="form-control" />
         </form>
