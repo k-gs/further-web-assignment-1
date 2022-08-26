@@ -5,6 +5,8 @@ import {Navigate} from "react-router-dom";
 //import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
 //import './Form.css';
 //import LandingPage from './Landing'
+//
+import logo from './32.jpg';
 
 //import ReactDOM from 'react-dom/client';
 
@@ -43,7 +45,7 @@ function Profile() {
             <p id="user_name">{name}</p>
             <p id="user_email">{email}</p>
             <p id="join_date">{date}</p>
-
+            <img src={logo} alt="logo" />
             <form action="/ProfileEdit">
                 <input type="submit" value="Edit Profile" />
             </form>
