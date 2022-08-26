@@ -37,7 +37,7 @@ function SignUp() {
 
     if (loggedIn) {
         console.log("Redirecting...")
-        return <Navigate replace to="/LandingPage" />;
+        return <Navigate replace to="/MainPage" />;
     }
 
     return (
