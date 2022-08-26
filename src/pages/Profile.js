@@ -1,14 +1,5 @@
-//import Button from 'react-bootstrap/Button';
-//import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react';
-//import ReactDOM from 'react-dom/client';
-//import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
-//import './Form.css';
-//import LandingPage from './Landing'
-
-//import ReactDOM from 'react-dom/client';
-
 
 function Profile() {
 
@@ -17,21 +8,21 @@ function Profile() {
     const name = localStorage.getItem('name');
     const date = localStorage.getItem("date");
 
+    //clears local storage
+    //TODO: redirect to first page
     function deleteProfile() {
         localStorage.clear()
         window.alert("Profile Deleted")
     }
 
+    //creates a text popup to confirm you want to delete your profile
+    //calls the delete profile function
     function deleteConfirmation() {
         if (window.confirm("Are you sure you want to delete your profile?")){
             deleteProfile();
         }
-
-        
     } 
     
-
-
     return (
         <body>
             <h1>Profile Page</h1>
@@ -44,15 +35,9 @@ function Profile() {
             </form>
 
             <button onClick={deleteConfirmation}>Delete Profile</button>
-            
-
-
         </body>
-
-
     )
     
 }
-
 export default Profile;
 
