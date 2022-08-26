@@ -15,7 +15,6 @@ function Profile_Edit() {
     const [name, setName] = useState("");
 
     const handleFormSubmit = (event) => {
-        event.preventDefault();
         localStorage.setItem("email", email)
         localStorage.setItem("name", name)
     }
@@ -39,6 +38,7 @@ function Profile_Edit() {
             </label>
             <input
                 class="form-control"
+                type="text"
                 onChange={(e) => setName(e.target.value)}
                 id="name"
                 placeholder={Name}
