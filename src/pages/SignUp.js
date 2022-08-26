@@ -18,7 +18,7 @@ function SignUp() {
 
     const handleSubmit = (event) => {
         // On form submit
-        event.preventDefault();
+        //event.preventDefault();
 
         // Save name, email, password and date of sign up 
         // to local storage
