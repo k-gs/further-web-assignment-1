@@ -12,6 +12,8 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import MainPage from './pages/MainPage';
 import Landing from './pages/Landing';
+import Profile from './pages/Profile';
+import Profile_Edit from "./pages/Profile_Edit";
 
 
 // Create a custom hook that uses both useLocation and useEffect
@@ -34,6 +36,8 @@ const App = () => {
                     <Route path="/MainPage" element={<MainPage />} />
                     <Route path="/SignIn" element={<SignIn />} />
                     <Route path="/SignUp" element={<SignUp />} />
+                    <Route path="/Profile" element={<Profile />} />
+                    <Route path="/Profile Edit" element={<Profile_Edit />} />
                 </Routes>
             </Router>
         </div>
