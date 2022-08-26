@@ -12,12 +12,13 @@ import {useState} from 'react';
 
 function Profile() {
 
-    const email = localStorage.getItem('email')
-    const name = localStorage.getItem('name')
+    const email = localStorage.getItem('email');
+    const name = localStorage.getItem('name');
     const date = localStorage.getItem("date");
     document.getElementById("user_email").innerHTML = email;
     document.getElementById("user_name").innerHTML = name;
     document.getElementById("join_date").innerHTML = date;
+    
 
     return (
         <body>
