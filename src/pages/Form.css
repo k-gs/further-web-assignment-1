@@ -1,21 +1,26 @@
-body {
-  background-color: #00000;
-  color: black;
-  padding: 40px;
-  margin:40px;
-  font-family: Arial;
-  text-align: center;
-}
-
 * {
     box-sizing: border-box
 }
 
+
+label {
+   width: 50%; 
+   padding: 12px 20px; 
+   margin-left: auto;
+   margin-right: auto;
+   box-sizing: border-box; 
+}
+
+form {
+  text-align: center;
+}
+
 input {
-  display:block;
-  width:100%;
-  margin:10px 0;
-  padding:10px;
+   width: 50%; 
+   padding: 12px 20px; 
+   margin-left: auto;
+   margin-right: auto;
+   box-sizing: border-box; 
 }
 
 input[type=name] { 

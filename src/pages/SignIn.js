@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     BrowserRouter as Router,
     Route,
@@ -14,6 +14,7 @@ function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
+    console.log("Hello");
 
     const handleSubmit = (event) => {
         if ((localStorage.getItem("email") === email) &&
@@ -55,7 +56,19 @@ function SignIn() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <input type="submit" value="Sign In" class="form-control" />
+            <br />
+            <input type="submit" value="Sign Up" class="form-control" />
+            <br /><br /><br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
         </form>
     )
 }

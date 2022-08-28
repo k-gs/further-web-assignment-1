@@ -1,7 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import './Form.css';
+//import './Form.css';
 import {
     BrowserRouter as Router,
     Route,

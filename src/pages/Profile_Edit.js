@@ -4,20 +4,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react';
 //import ReactDOM from 'react-dom/client';
 //import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
-import './Form.css';
+//import './Form.css';
 //import LandingPage from './Landing'
-
 //import ReactDOM from 'react-dom/client';
 
 
 function Profile_Edit() {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+    const [selectedImage, setSelectedImage] = useState(null);
 
+    console.log(selectedImage);
     const handleFormSubmit = (event) => {
         localStorage.setItem("email", email)
         localStorage.setItem("name", name)
     }
+
+
     const Email = localStorage.getItem("email");
     const Name = localStorage.getItem("name");
 
@@ -32,7 +35,8 @@ function Profile_Edit() {
                 class="form-control"
                 id="email"
                 required=""
-                placeholder={Email}
+                value={Email}
+            //placeholder={Email}
             />
             <label>Name:
             </label>
@@ -41,9 +45,30 @@ function Profile_Edit() {
                 type="text"
                 onChange={(e) => setName(e.target.value)}
                 id="name"
-                placeholder={Name}
+                value={Name}
+            //placeholder={Name}
             />
             <input type="submit" class="form-control" />
+            <div>
+                {selectedImage && (
+                    <div>
+                        <img alt="not found" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+                        <br />
+                        <button onClick={() => setSelectedImage(null)}>Remove</button>
+                    </div>
+                )}
+                <br />
+
+                <br />
+                <input
+                    type="file"
+                    name="myImage"
+                    onChange={(event) => {
+                        console.log(event.target.files[0]);
+                        setSelectedImage(event.target.files[0]);
+                    }}
+                />
+            </div>
         </form>
     )
 }

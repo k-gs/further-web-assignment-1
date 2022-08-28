@@ -14,34 +14,34 @@ import MainPage from './pages/MainPage';
 import Landing from './pages/Landing';
 import Profile from './pages/Profile';
 import ProfileEdit from "./pages/Profile_Edit";
+import NavigationBar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Create a custom hook that uses both useLocation and useEffect
-const useScrollToTop = () => {
-    const location = useLocation();
-    useEffect(() => {
-        window.scrollTo({top: 0});
-        // scroll to the top of the browser window when changing route
-        // the window object is a normal DOM object and is safe to use in React.
-    }, [location]);
-};
+// const useScrollToTop = () => {
+//     const location = useLocation();
+//     useEffect(() => {
+//         window.scrollTo({top: 0});
+//         // scroll to the top of the browser window when changing route
+//         // the window object is a normal DOM object and is safe to use in React.
+//     }, [location]);
+// };
 
 // The root component
 const App = () => {
     return (
-
-        < div style={{padding: 50}
-        }>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Landing />} />
-                    <Route path="/MainPage" element={<MainPage />} />
-                    <Route path="/SignIn" element={<SignIn />} />
-                    <Route path="/SignUp" element={<SignUp />} />
-                    <Route path="/Profile" element={<Profile />} />
-                    <Route path="/ProfileEdit" element={<ProfileEdit />} />
-                </Routes>
-            </Router>
-        </div >
+        <Router>
+            <NavigationBar />
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/MainPage" element={<MainPage />} />
+                <Route path="/SignIn" element={<SignIn />} />
+                <Route path="/SignUp" element={<SignUp />} />
+                <Route path="/Profile" element={<Profile />} />
+                <Route path="/ProfileEdit" element={<ProfileEdit />} />
+            </Routes>
+            <Footer />
+        </Router>
     );
 };
 

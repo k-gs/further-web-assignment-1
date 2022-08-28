@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     BrowserRouter as Router,
     Route,
@@ -8,7 +8,7 @@ import {
     Navigate,
 } from "react-router-dom";
 import {useState} from 'react';
-import './Form.css';
+//import './Form.css';
 
 function SignUp() {
     const [name, setName] = useState("");
@@ -42,6 +42,7 @@ function SignUp() {
 
     return (
         <form onSubmit={handleSubmit}>
+            <br /><br />
             <label>Name:
             </label>
             <input
@@ -80,7 +81,19 @@ function SignUp() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
             />
+            <br />
             <input type="submit" value="Sign Up" class="form-control" />
+            <br /><br /><br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
         </form>
     )
 }

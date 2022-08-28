@@ -1,13 +1,13 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react';
 import {Navigate} from "react-router-dom";
 //import ReactDOM from 'react-dom/client';
 //import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
-//import './Form.css';
+import './Form.css';
 //import LandingPage from './Landing'
 //
-import logo from './32.jpg';
 
+import logo from './8.jpg';
 //import ReactDOM from 'react-dom/client';
 
 function Profile() {
