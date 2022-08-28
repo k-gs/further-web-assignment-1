@@ -45,8 +45,8 @@ function Profile_Edit() {
                 type="text"
                 onChange={(e) => setName(e.target.value)}
                 id="name"
-                value={Name}
-            //placeholder={Name}
+                placeholder={Name}
+                required
             />
             <input type="submit" class="form-control" />
             <div>
