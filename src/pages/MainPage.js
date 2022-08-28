@@ -1,52 +1,50 @@
-//import 'bootstrap/dist/css/bootstrap.min.css';
-import {useEffect, useState} from 'react';
-import ReactDOM from 'react-dom/client';
-//import './Form.css';
+import {useState} from 'react';
 import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
     Link,
-    useLocation,
     Navigate,
 } from "react-router-dom";
 
-// function MainPage() {
-//     return (
-//         <>
-//             <h1>Login Successful</h1>
-//             <hr />
-//             <p style={{marginTop: "150vh"}}>
-//                 <Link to="/ProfileEdit">EditProfile</Link>
-//                 <Link to="/Profile">ViewProfile</Link>
-//             </p>
-//         </>
-//     );
-// }
 
 function MainPage() {
-    //const [loggedIn, setLoggedIn] = useState(false);
-    const [stupidBool, setStupidBool] = useState(false);
-    //setStupidBool(localStorage.getItem("loggedIn"));
-    // useEffect(() => {
-    //     const loggedInUser = localStorage.getItem("loggedIn");
-    //     if (loggedInUser === "true") {
-    //         setLoggedIn(true);
-    //     }
-    // }, []);
+    // Vars to hold users name and whether they've clicked sign out
+    const [signedOut, setSignedOut] = useState(false);
+    const Name = localStorage.getItem("name");
 
+    // If user clicks sign out
     function signOut() {
-        setStupidBool(true);
+        setSignedOut(true);
     }
 
-    if (stupidBool) {
+    // On sign out, redirect to home page
+    if (signedOut) {
         return <Navigate replace to="/" />;
     }
 
     return (
         <body>
-            <h1>Login successful</h1>
-            <button onClick={signOut}>Sign Out</button>
+            <div className='profile_body'>
+                <br /><br />
+                <h1>Welcome, {Name}</h1>
+                <Link to="/Profile">View your Profile</Link>
+                <br />
+                <Link to="/">Make your first post</Link>
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <button onClick={signOut}>Sign Out</button>
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
+            </div>
         </body>
     );
 }

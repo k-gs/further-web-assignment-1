@@ -11,25 +11,27 @@ import {useState} from 'react';
 import './Form.css';
 
 function SignIn() {
+    // Create variables to store user data
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
-    console.log("Hello");
 
+    // When user presses "sign in"
     const handleSubmit = (event) => {
+        // If login details match those saved in localStorage, log in
         if ((localStorage.getItem("email") === email) &&
             localStorage.getItem("password") === password)
             setLoggedIn(true);
-        //localStorage.setItem("loggedIn", true)
     }
 
     if (loggedIn) {
-        console.log("Redirecting...")
+        // If login successful, redirect user to main page
         return <Navigate replace to="/MainPage" />;
     }
 
     return (
         <form onSubmit={handleSubmit}>
+            <br />
             <label>Email:
             </label>
             <input

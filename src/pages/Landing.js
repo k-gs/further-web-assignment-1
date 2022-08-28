@@ -1,26 +1,22 @@
-//import 'bootstrap/dist/css/bootstrap.min.css';
-import {useEffect, useState} from 'react';
-import ReactDOM from 'react-dom/client';
-//import './Form.css';
+import {useState} from 'react';
 import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    Link,
-    useLocation,
     Navigate,
 } from "react-router-dom";
 import landingImage from "./Landing-Page-Image.jpg";
 import "./Landing.css";
-//import ReactDOM from 'react-dom/client';
 
 
 function Landing() {
-    const [stupidBool3, setStupidBool3] = useState(false);
+    // Value to check if user has clicked sign up
+    const [signedUp, setSignedUp] = useState(false);
+
+    // If user clicks sign up
     function signUp() {
-        setStupidBool3(true);
+        setSignedUp(true);
     }
-    if (stupidBool3) {
+
+    // Redirect on clicking sign up
+    if (signedUp) {
         return <Navigate replace to="/SignUp" />;
     }
 

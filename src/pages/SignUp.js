@@ -1,24 +1,18 @@
-//import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    Link,
-    useLocation,
     Navigate,
 } from "react-router-dom";
 import {useState} from 'react';
-//import './Form.css';
+import './Form.css';
 
 function SignUp() {
+    // Create variables to store all user data
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = () => {
         // On form submit
-        //event.preventDefault();
 
         // Save name, email, password and date of sign up 
         // to local storage
@@ -27,16 +21,17 @@ function SignUp() {
         localStorage.setItem("password", password)
         const d = new Date();
         d.getDate();
+
+        // Format date
         localStorage.setItem("date", d.getDay() + "/" + d.getMonth() +
             "/" + d.getFullYear());
 
         // Set user to logged in
         setLoggedIn(true);
-        //localStorage.setItem("loggedIn", true)
     }
 
     if (loggedIn) {
-        console.log("Redirecting...")
+        // If user is logged in, redirect to main page
         return <Navigate replace to="/MainPage" />;
     }
 
@@ -60,6 +55,10 @@ function SignUp() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+
+                // Regex pattern that checks if the entered email is an
+                // email
+
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                 class="form-control"
                 placeholder="name@example.com"
